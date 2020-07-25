@@ -7,6 +7,8 @@ services:
     ports:
       - 3308:3308
     command: --port 3308
+    volumes:
+      - ./sql:/docker-entrypoint-initdb.d
     environment:
       MYSQL_ROOT_PASSWORD: password
       MYSQL_DATABASE: calenderdb

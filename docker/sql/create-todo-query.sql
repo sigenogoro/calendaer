@@ -1,0 +1,8 @@
+use calenderdb;
+
+create table task(
+  id BIGINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  content VARCHAR(255) NOT NULL,
+  creted_at DATETIME NOT NULL default CURRENT_TIMESTAMP,
+  updated_at DATETIME NOT NULL default CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
